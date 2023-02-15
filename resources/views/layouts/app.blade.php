@@ -34,8 +34,9 @@
   <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
-{{--   <link rel="stylesheet" href="{{ URL::asset('assets/css/carousel.css') }}"> --}}
+
+  {{--
+  <link rel="stylesheet" href="{{ URL::asset('assets/css/carousel.css') }}"> --}}
   <link rel="stylesheet" href="{{ URL::asset('assets/css/owl.carousel.min.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('assets/css/owl.theme.default.min.css') }}">
   <link rel="stylesheet" href="{{ URL::asset('assets/css/bootstrap.min.css') }}">
@@ -51,7 +52,8 @@
     <div class="sidebar">
       <nav class="sidebar_menus">
         <div class="responsive_logo">
-          <a href="/?main" class="responsive_logo header_link"><img src="{{ URL::asset('assets/img/logo.png') }}" width="110px"></a>
+          <a href="/?main" class="responsive_logo header_link"><img src="{{ URL::asset('assets/img/logo.png') }}"
+              width="110px"></a>
           <div class="sitebar_close">
             <a role="button" href="javascript:void(0);" class="header_link" style="margin-left: 14px"></a>
           </div>
@@ -146,7 +148,8 @@
       <div class="header">
         <div class="header_logo">
           <h1 class="logo">
-            <a href="/" title="백두세라믹 메인페이지"><img src="{{ URL::asset('assets/img/logo.png') }}" alt="백두세라믹 로고" width="120px" height="80px"></a>
+            <a href="/" title="백두세라믹 메인페이지"><img src="{{ URL::asset('assets/img/logo.png') }}" alt="백두세라믹 로고"
+                width="120px" height="80px"></a>
           </h1>
         </div>
         <ul class="header_items">
@@ -252,6 +255,25 @@
   <div>
     @yield('content')
   </div>
+
+  <footer class="footer-section">
+    <div class="inner">
+      <img src="{{ URL::asset('assets/img/logo.png') }}" alt="백두세라믹_로고" width="200px" height="100px">
+      <div class="footer-contents">
+        <br>
+        <span>대표자명 : 백윤현</span>
+        <span>사업자등록번호 : 126-24-10510</span>
+        <span>주소 : 경기도 하남시 하남대로 308</span>
+        <span>E-mail : 75baek@hanmail.net</span>
+        <span style="display: block; text-align: center; margin-top: 8px">Tel ) 대표번호&nbsp; 031-794-1016
+          &nbsp;&nbsp;|&nbsp;&nbsp; 시공문의&nbsp; 010-2347-8507 &nbsp;&nbsp;|&nbsp;&nbsp; 자재문의&nbsp; 010-5091-8994</span>
+        <p>Copyright © <span style="color: #d7d7d7; font-weight: 600; margin: 0">백두세라믹.</span> All Rights Reserved </p>
+        {{-- <p><a class="admin_login" href="/?logout">관리자 로그아웃</a></p> --}}
+        <p><a class="admin_login" href="/?login">관리자 로그인</a></p>
+      </div>
+
+    </div>
+  </footer>
 </body>
 <script>
   $(function() {
