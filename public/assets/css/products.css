@@ -1,0 +1,167 @@
+.productImage {
+  width: 276px;
+  height: 188px;
+  border-bottom: 1px solid #ddd;
+}
+
+.productList {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 22px;
+}
+
+.productView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.8;
+  margin: 0px 0px 16px 12px;
+  transition: all 0.15s ease-out;
+  border: 1px solid #ccc;
+}
+
+.productView:hover {
+  transform: translateY(-8px);
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0px;
+}
+
+.productName {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.productView a {
+  font-size: 20px;
+  color: black;
+  font-weight: 600;
+}
+
+.productView a:hover {
+  color: #cd2426;
+}
+
+.productLocate {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+    min-height: 1400px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width:991px) {
+  .site-section {
+    padding: 2.0em 0em 0em 0em
+  }
+
+  .footer-section {
+    padding: 2em 0em
+  }
+
+  .footer-section img {
+    width: 40px !important
+  }
+
+  .view_title {
+    padding: 0px;
+  }
+
+  .view_title li>span {
+    font-size: 24px !important;
+    margin: 3px !important;
+  }
+
+  .sub_img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sub_img h1 {
+    padding: 0px;
+    font-size: 32px
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .productList {
+    justify-content: center;
+  }
+}
+
+table th {
+  font-weight: 500;
+}
+
+.product-picture {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wrap {
+  position: relative;
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.leftMenu {
+  width: 190px;
+  float: left;
+}
+
+.leftMenu h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.leftMenu li {
+  transition: 0.2s all;
+}
+
+.leftMenu li.active {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.leftMenu li:hover {
+  background-color: #f5f5f5;
+}
+
+.leftMenu ul li a {
+  font-size: 16px;
+  padding: 16px 6px;
+  display: block;
+  transition: 0.2s all;
+}
+
+.leftMenu ul li a.active {
+  color: #cd2426;
+}
+
+.leftMenu ul li a:before {
+  content: "○";
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+.leftMenu ul li a:hover {
+  color: #cd2426;
+}
+
+.rightMenu {
+  float: right;
+  width: calc(100% - 200px);
+}
