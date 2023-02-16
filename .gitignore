@@ -2,6 +2,7 @@
 /public/hot
 /public/storage
 /public/assets/smarteditor
+/public/assets/thumbnail
 /storage/*.key
 /vendor
 /.idea

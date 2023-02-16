@@ -16,6 +16,7 @@ class CreateProduct03Table extends Migration
         Schema::create('product03', function (Blueprint $table) {
             $table->increments('id');
             $table->string('detail_idx', 10);
+            $table->string('category', 30);
             $table->string('data1', 10);
             $table->string('data2', 10);
             $table->string('data3', 10);
@@ -23,6 +24,7 @@ class CreateProduct03Table extends Migration
             $table->string('data5', 10);
             $table->string('title', 64);
             $table->longText('contents');
+            $table->string('picture', 2);
             $table->timestamps();
         });
     }

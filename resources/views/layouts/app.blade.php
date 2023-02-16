@@ -154,95 +154,95 @@
         </div>
         <ul class="header_items">
           <li class="items_list">
-            <a class="items_name" href="/?product01/list/&detail_idx=1">점토벽돌</a>
+            <a class="items_name" href="/products?group_no=01&cate_no=1">점토벽돌</a>
             <ul class="items_list2">
               <li>
-                <a href="/?product01/list/&detail_idx=1">점토벽돌</a>
+                <a href="/products?group_no=01&cate_no=1">점토벽돌</a>
               </li>
               <li>
-                <a href="/?product01/list/&detail_idx=2">와이드벽돌</a>
+                <a href="/products?group_no=01&cate_no=2">와이드벽돌</a>
               </li>
               <li>
-                <a href="/?product01/list/&detail_idx=3">전돌</a>
+                <a href="/products?group_no=01&cate_no=3">전돌</a>
               </li>
               <li>
-                <a href="/?product01/list/&detail_idx=4">수입벽돌</a>
+                <a href="/products?group_no=01&cate_no=4">수입벽돌</a>
               </li>
               <li>
-                <a href="/?product01/list/&detail_idx=5">내화벽돌</a>
+                <a href="/products?group_no=01&cate_no=5">내화벽돌</a>
               </li>
             </ul>
           </li>
           <li class="items_list">
-            <a class="items_name" href="/?product02/list/&detail_idx=1">고벽돌</a>
+            <a class="items_name" href="/products?group_no=02&cate_no=1">고벽돌</a>
             <ul class="items_list2">
               <li>
-                <a href="/?product02/list/&detail_idx=1">적고벽돌</a>
+                <a href="/products?group_no=02&cate_no=1">적고벽돌</a>
               </li>
               <li>
-                <a href="/?product02/list/&detail_idx=2">청고벽돌</a>
+                <a href="/products?group_no=02&cate_no=2">청고벽돌</a>
               </li>
               <li>
-                <a href="/?product02/list/&detail_idx=3">백고벽돌</a>
+                <a href="/products?group_no=02&cate_no=3">백고벽돌</a>
               </li>
             </ul>
           </li>
           <li class="items_list">
-            <a class="items_name" href="/?product03/list/&detail_idx=1">모노벽돌</a>
+            <a class="items_name" href="/products?group_no=03&cate_no=1">모노벽돌</a>
 
           </li>
           <li class="items_list">
-            <a class="items_name" href="/?product04/list/&detail_idx=1">벽돌타일</a>
+            <a class="items_name" href="/products?group_no=04&cate_no=1">벽돌타일</a>
             <ul class="items_list2">
               <li>
-                <a href="/?product04/list/&detail_idx=1">점토타일</a>
+                <a href="/products?group_no=04&cate_no=1">점토타일</a>
               </li>
               <li>
-                <a href="/?product04/list/&detail_idx=2">롱점토타일</a>
+                <a href="/products?group_no=04&cate_no=2">롱점토타일</a>
               </li>
               <li>
-                <a href="/?product04/list/&detail_idx=3">세라믹타일</a>
+                <a href="/products?group_no=04&cate_no=3">세라믹타일</a>
               </li>
               <li>
-                <a href="/?product04/list/&detail_idx=4">전돌타일</a>
+                <a href="/products?group_no=04&cate_no=4">전돌타일</a>
               </li>
               <li>
-                <a href="/?product04/list/&detail_idx=5">현무암타일</a>
+                <a href="/products?group_no=04&cate_no=5">현무암타일</a>
               </li>
               <li>
-                <a href="/?product04/list/&detail_idx=6">천연석</a>
+                <a href="/products?group_no=04&cate_no=6">천연석</a>
               </li>
               <li>
-                <a href="/?product04/list/&detail_idx=7">인조석</a>
+                <a href="/products?group_no=04&cate_no=7">인조석</a>
               </li>
             </ul>
           </li>
           <li class="items_list">
-            <a class="items_name" href="/?product05/list/&detail_idx=1">고벽돌타일</a>
+            <a class="items_name" href="/products?group_no=05&cate_no=1">고벽돌타일</a>
             <ul class="items_list2">
               <li>
-                <a href="/?product05/list/&detail_idx=1">적고타일</a>
+                <a href="/products?group_no=05&cate_no=1">적고타일</a>
               </li>
               <li>
-                <a href="/?product05/list/&detail_idx=2">청고타일</a>
+                <a href="/products?group_no=05&cate_no=2">청고타일</a>
               </li>
               <li>
-                <a href="/?product05/list/&detail_idx=3">백고타일</a>
+                <a href="/products?group_no=05&cate_no=3">백고타일</a>
               </li>
             </ul>
           </li>
 
           <li class="items_list">
-            <a class="items_name" href="/?product06/list/&detail_idx=1">모노타일</a>
+            <a class="items_name" href="/products?group_no=06&cate_no=1">모노타일</a>
           </li>
           <li class="items_list">
-            <a class="items_name" href="/?product07/list/&detail_idx=1">디자인블럭</a>
+            <a class="items_name" href="/products?group_no=07&cate_no=1">디자인블럭</a>
           </li>
           <li class="items_list">
-            <a class="items_name" href="/?product08/list/&detail_idx=1">바닥재</a>
+            <a class="items_name" href="/products?group_no=08&cate_no=1">바닥재</a>
           </li>
           <li class="items_list">
-            <a class="items_name" href="/?product09">시공사례</a>
+            <a class="items_name" href="/products?group_no=09&cate_no=1">시공사례</a>
           </li>
         </ul>
         <div class="responsive_icon" style="min-height: 34px;">
