@@ -48,12 +48,12 @@
         @for ( $i = 0; $i < count($products); $i++ )
         <div class="productView">
           <div class="productImage">
-            <a href="/?product01/detail/&detail_idx=77&product_idx=">
+            <a href="/products/show?group_no={{ $group_no }}&cate_no={{ $cate_no }}&product_no={{ $products[$i]->id }}">
               <img src="{{ URL::asset('assets/thumbnail/product'.$group_no.'/'.$productImg[$i]->bf_file) }}" class="productImage">
             </a>
           </div>
           <div class="productInfo">
-            <span class="productName"><a href="/?product01/detail/&detail_idx=">{{ $products[$i]->title }}</a></span>
+            <span class="productName"><a href="/products/show?group_no={{ $group_no }}&cate_no={{ $cate_no }}&product_no={{ $products[$i]->id }}">{{ $products[$i]->title }}</a></span>
             <span class="productName">제품규격 : {{ $products[$i]->data1 }} x {{ $products[$i]->data2 }} x {{ $products[$i]->data3 }}
             </span>
           </div>
@@ -63,10 +63,6 @@
 
     </div>
   </div>
-
-  <nav aria-label="Page navigation">
-    <ul class="pagination justify-content-center" id="pageNavigation"></ul>
-  </nav>
 </div>
 
 

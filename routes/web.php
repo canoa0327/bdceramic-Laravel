@@ -19,3 +19,4 @@ Route::get('/', function () {
 }); 
 
 Route::get('/products', 'ProductController@index')->name('products.index');
+Route::get('/products/show', 'ProductController@show')->name('products.show');

@@ -737,3 +737,9 @@ textarea::-webkit-outer-spin-button {
     height: 300px;
   }
 }
+
+.createBtn:hover {
+  border: 1px solid #333;
+  background-color: #333;
+  color: #fff
+}
