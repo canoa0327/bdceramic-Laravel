@@ -12,7 +12,6 @@
 */
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('layouts.main');
@@ -20,3 +19,5 @@ Route::get('/', function () {
 
 Route::get('/products', 'ProductController@index')->name('products.index');
 Route::get('/products/show', 'ProductController@show')->name('products.show');
+
+Route::get('/auth', 'LoginController@index')->name('login');
