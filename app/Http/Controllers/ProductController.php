@@ -125,4 +125,9 @@ class ProductController extends Controller
             return redirect()->back();
         }
     }
+
+    public function store(Request $request)
+    {
+        
+    }
 }
