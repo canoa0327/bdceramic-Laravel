@@ -13,6 +13,11 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('home', function() {
+    $value = session('key');
+    session(['key' => 'value']);
+});
+
 Route::get('/', function () {
     return view('layouts.main');
 }); 
@@ -20,4 +25,5 @@ Route::get('/', function () {
 Route::get('/products', 'ProductController@index')->name('products.index');
 Route::get('/products/show', 'ProductController@show')->name('products.show');
 
-Route::get('/auth', 'LoginController@index')->name('login');
+Route::get('login', 'LoginController@index')->name('login');
+Route::post('login', 'LoginController@login')->name('auth.login');

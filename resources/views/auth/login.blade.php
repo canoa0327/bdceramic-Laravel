@@ -1,17 +1,19 @@
-<h2>백두세라믹 로그인</h2>
-<div class="container" id="container">
+@extends('layouts.app')
+@section ('content')
 
-  <div class="form-container sign-in-container">
-    <form action="">
-      <h1>ADMIN LOGIN</h1>
-      <input type="text" placeholder="id" name="admin_id" id="admin_id" onkeyup="enterkey()" />
-      <input type="password" placeholder="Password" name="admin_pw" id="admin_pw" onkeyup="enterkey()" />
-      <button type="button" onclick="login()">로그인</button>
-    </form>
+<div style="min-height: 960px; padding-top: 96px; display: flex; align-items: center; background-color:#333">
+  <div class="container" id="container">
+    <div class="form-container sign-in-container">
+      <form action="{{ route('login') }}" method="post" id="frm">
+        {{ csrf_field() }}
+        <h1>ADMIN LOGIN</h1>
+        <input type="text" placeholder="ID" name="admin_id" id="admin_id" onkeyup="enterkey()" />
+        <input type="password" placeholder="Password" name="admin_pw" id="admin_pw" onkeyup="enterkey()" />
+        <button type="button" onclick="login()">로그인</button>
+      </form>
+    </div>
   </div>
-
 </div>
-
 
 <script>
   function enterkey() {
@@ -19,7 +21,6 @@
       login();
     }
   }
-
 
   function login() {
     checkId = $('#admin_id').val();
@@ -39,36 +40,12 @@
       return false;
     }
 
-    var data = {
-      type: 'login',
-      admin_id: $('#admin_id').val(),
-      admin_pw: $('#admin_pw').val(),
-    };
-    var result = getAjax('/prcs/prcs', 'POST', data);
-    console.log(result);
-    if (result.state == 'success') {
-      location.replace('/');
-    }
+    $('#frm').submit();
   }
 </script>
 
 <style>
   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    background: #f6f5f7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
-    height: 100vh;
-    margin: -20px 0 50px;
-  }
 
   h1 {
     font-weight: bold;
@@ -89,13 +66,6 @@
 
   span {
     font-size: 12px;
-  }
-
-  a {
-    color: #333;
-    font-size: 14px;
-    text-decoration: none;
-    margin: 15px 0;
   }
 
   button {
@@ -308,3 +278,5 @@
     text-decoration: none;
   }
 </style>
+
+@endsection

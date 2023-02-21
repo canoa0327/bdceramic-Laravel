@@ -274,6 +274,7 @@
 
     </div>
   </footer>
+  @include('sweetalert::alert')
 </body>
 <script>
   $(function() {
