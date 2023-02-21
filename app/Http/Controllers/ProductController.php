@@ -10,6 +10,10 @@ class ProductController extends Controller
 
     public function index(Request $request)
     {
+        if(session()->has('mgmt-login')) {
+            $session = session()->get('mgmt-login');
+        } else $session = false;
+
         $group_no = $request->input('group_no');
         $cate_no = $request->input('cate_no');
 
@@ -53,7 +57,7 @@ class ProductController extends Controller
         $products = DB::table('product' . $group_no)->where('detail_idx', $cate_no)->get();
         $productImg = DB::table('files')->where('table_name', 'product' . $group_no . '_' . $cate_no)->get();
 
-        return view('products.index', compact(['group_no', 'cate_no', 'products', 'productImg', 'productTitle', 'productArr']));
+        return view('products.index', compact(['group_no', 'cate_no', 'products', 'productImg', 'productTitle', 'productArr', 'session']));
 
     }
 
@@ -110,5 +114,15 @@ class ProductController extends Controller
             ['table_id', $product_no]
         ])->get();
         return view('products.show', compact(['group_no', 'cate_no', 'product_no', 'products', 'productImg', 'productTitle', 'productArr']));
+    }
+
+    public function create()
+    {
+        if(session()->has('mgmt-login')) {
+            $value = session()->get('mgmt-login');
+            return view('products.create', ['session' => $value]);
+        } else {
+            return redirect()->back();
+        }
     }
 }

@@ -268,8 +268,11 @@
         <span style="display: block; text-align: center; margin-top: 8px">Tel ) 대표번호&nbsp; 031-794-1016
           &nbsp;&nbsp;|&nbsp;&nbsp; 시공문의&nbsp; 010-2347-8507 &nbsp;&nbsp;|&nbsp;&nbsp; 자재문의&nbsp; 010-5091-8994</span>
         <p>Copyright © <span style="color: #d7d7d7; font-weight: 600; margin: 0">백두세라믹.</span> All Rights Reserved </p>
-        {{-- <p><a class="admin_login" href="/?logout">관리자 로그아웃</a></p> --}}
+        @if($session === true)
+        <p><a class="admin_login" href="{{ route('logout') }}">관리자 로그아웃</a></p>
+        @else
         <p><a class="admin_login" href="{{ route('login') }}">관리자 로그인</a></p>
+        @endif
       </div>
 
     </div>

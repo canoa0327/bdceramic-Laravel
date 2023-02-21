@@ -11,7 +11,11 @@ class LoginController extends Controller
 {
     public function index()
     {
-        return view('auth/login');
+        if(session()->has('mgmt-login')) {
+            $value = session()->get('mgmt-login');
+        } else $value = false;
+
+        return view('auth/login', ['session' => $value]);
     }
 
     public function login(Request $request)
@@ -27,5 +31,12 @@ class LoginController extends Controller
         } else {
             return redirect()->back();
         }
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        return redirect()->back();
     }
 }

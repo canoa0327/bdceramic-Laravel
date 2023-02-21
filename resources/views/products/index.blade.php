@@ -20,9 +20,11 @@
 
     <div class="wrap">
 
-      {{-- <div class="search-contents">
-        <button class="search-button" onclick="location.href='/?create';">제품등록</button>
-      </div> --}}
+      @if($session === true)
+      <div class="search-contents">
+        <button class="search-button" onclick="location.href='{{ route('products.create') }}';">제품등록</button>
+      </div>
+      @endif
 
 
       <div class="leftMenu">
