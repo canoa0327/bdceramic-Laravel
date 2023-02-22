@@ -63,6 +63,10 @@ class ProductController extends Controller
 
     public function show(Request $request)
     {
+        if(session()->has('mgmt-login')) {
+            $session = session()->get('mgmt-login');
+        } else $session = false;
+
         $group_no = $request->input('group_no');
         $cate_no = $request->input('cate_no');
         $product_no = $request->input('product_no');
@@ -113,7 +117,7 @@ class ProductController extends Controller
             ['table_name', 'product' . $group_no . '_' . $cate_no],
             ['table_id', $product_no]
         ])->get();
-        return view('products.show', compact(['group_no', 'cate_no', 'product_no', 'products', 'productImg', 'productTitle', 'productArr']));
+        return view('products.show', compact(['group_no', 'cate_no', 'product_no', 'products', 'productImg', 'productTitle', 'productArr', 'session']));
     }
 
     public function create()
