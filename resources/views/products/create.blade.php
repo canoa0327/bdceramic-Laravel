@@ -25,10 +25,10 @@
         <input type="text" class="form-control" id="title" name="title" required>
       </div>
       <div class="input-group col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 pr-lg-3 mb-3 pl-0 pr-0">
-        {{-- <input type="file" class="form-control" accept="image/*" id="imgFiles1" name="imgFiles[]" placeholder=""
-          onchange="checkFiles(this.files)"> --}}
+        <input type="file" class="form-control" accept="image/*" id="thumbNailImg" name="thumbNailImg" placeholder=""
+          onchange="checkFiles(this.files)">
         <div class="input-group-append">
-          <button class="btn btn-outline-secondary" type="button" id="product_pic" onclick="$('#imgFiles1').click()">썸네일
+          <button class="btn btn-outline-secondary" type="button" id="product_pic" onclick="$('#thumbNailImg').click()">썸네일
             사진 선택</button>
         </div>
       </div>
@@ -36,20 +36,20 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="addon-wrapping">치수</span>
         </div>
-        <input type="text" class="form-control" id="data1" name="data1" placeholder="가로길이" required>
+        <input type="text" class="form-control" id="data1" name="data1" placeholder="가로길이" maxlength="20" required />
         <label for="" class="input-group-text">X</label>
-        <input type="text" class="form-control" id="data2" name="data2" placeholder="세로길이" required>
+        <input type="text" class="form-control" id="data2" name="data2" placeholder="세로길이" maxlength="20" required />
         <label for="" class="input-group-text">X</label>
-        <input type="text" class="form-control" id="data3" name="data3" placeholder="높이" required>
+        <input type="text" class="form-control" id="data3" name="data3" placeholder="높이" maxlength="20" required />
         <div class="input-group-append">
 
         </div>
       </div>
       <div class="input-group col-xl-3 pl-0 pr-0 mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="addon-wrapping">소요량(1㎡)</span>
+          <span class="input-group-text" id="addon-wrapping" maxlength="30" >소요량(1㎡)</span>
         </div>
-        <input type="text" class="form-control" id="data4" name="data4" required>
+        <input type="text" class="form-control" id="data4" name="data4" maxlength="20" required />
         <div class="input-group-append">
           <label for="" class="input-group-text">장</label>
         </div>
@@ -58,7 +58,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="addon-wrapping">줄눈간격(mm)</span>
         </div>
-        <input type="text" class="form-control" id="data5" name="data5" required>
+        <input type="text" class="form-control" id="data5" name="data5" maxlength="20" required />
         <div class="input-group-append">
           <label for="" class="input-group-text">mm</label>
         </div>

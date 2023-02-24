@@ -144,6 +144,10 @@ class ProductController extends Controller
     $cate_no = $request->cate_no;
     $contents = str_replace('upload/', '/assets/data/products/', $request->contents);
 
+    if($request->has('thumbNailImg')) {
+      $request->thumbNailImg->store('images', 'public');
+    }
+
     DB::table('product' . $group_no)->insert([
       'detail_idx' => $cate_no,
       'data1' => $request->data1,
