@@ -23,6 +23,7 @@ Route::get('/', function () {
 Route::get('/products', 'ProductController@index')->name('products.index');
 Route::get('/products/show', 'ProductController@show')->name('products.show');
 Route::get('/products/create', 'ProductController@create')->name('products.create');
+Route::post('/products/store', 'ProductController@store')->name('products.store');
 
 Route::get('login', 'LoginController@index')->name('login');
 Route::post('login', 'LoginController@login')->name('auth.login');

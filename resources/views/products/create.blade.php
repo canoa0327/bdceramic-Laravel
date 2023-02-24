@@ -10,13 +10,13 @@
     <h2>제품등록</h2>
   </div>
 </div>
-<form id="registerForm" name="registerForm" action="/prcs/prcs" method="post" enctype="multipart/form-data">
+<form id="registerForm" name="registerForm" action="{{ route('products.store') }}" method="post" enctype="multipart/form-data">
   {{ csrf_field() }}
   <div class="container">
     <div class="write_contents">
       <select class="form-select mb-4 col-6" aria-label="Default select example" id="tableName" name="tableName">
       </select>
-      <select class="form-select mb-4 col-6" aria-label="Default select example" id="detailNum" name="detailNum">
+      <select class="form-select mb-4 col-6" aria-label="Default select example" id="cate_no" name="cate_no">
       </select>
       <div class="input-group flex-nowrap mb-3">
         <div class="input-group-prepend">
@@ -25,8 +25,8 @@
         <input type="text" class="form-control" id="title" name="title" required>
       </div>
       <div class="input-group col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 pr-lg-3 mb-3 pl-0 pr-0">
-        <input type="file" class="form-control" accept="image/*" id="imgFiles1" name="imgFiles[]" placeholder=""
-          onchange="checkFiles(this.files)">
+        {{-- <input type="file" class="form-control" accept="image/*" id="imgFiles1" name="imgFiles[]" placeholder=""
+          onchange="checkFiles(this.files)"> --}}
         <div class="input-group-append">
           <button class="btn btn-outline-secondary" type="button" id="product_pic" onclick="$('#imgFiles1').click()">썸네일
             사진 선택</button>
@@ -66,7 +66,7 @@
 
       <!-- <textarea id="summernote" name="summernote" style="width: 100%; min-width:300px; height: 300px;"></textarea> -->
       <div id="smarteditor">
-        <textarea name="editorTxt" id="editorTxt" rows="20" cols="10" placeholder="내용을 입력해주세요"
+        <textarea name="contents" id="editorTxt" rows="20" cols="10" placeholder="내용을 입력해주세요"
           style="width: 100%; min-width:300px; height: 600px;"></textarea>
       </div>
       <div class="row justify-content-center m-md-0 mr-1 ml-1">
@@ -125,15 +125,15 @@
     var area7 = ["디자인블럭"];
     var area8 = ["바닥재"];
 
-    $("select[name^=tableName]").each(function() {
+    $("select[id^=tableName]").each(function() {
       $selsido = $(this);
       $.each(eval(area0), function(index, item) {
-        $selsido.append("<option value='product0" + index + "'>" + this + "</option>");
+        $selsido.append("<option value='0" + index + "'>" + this + "</option>");
       });
       $selsido.next().append("<option value='0'>소분류</option>");
     });
 
-    $("select[name^=tableName]").change(function() {
+    $("select[id^=tableName]").change(function() {
       var area = "area" + $("option", $(this)).index($("option:selected", $(
         this)))
       var $detailName = $(this).next();
@@ -162,7 +162,7 @@
   }
 
   function FormSubmit() {
-    if ($('#tableName option:selected').val() == 'product00') {
+    if ($('#tableName option:selected').val() == '0') {
       alert('카테고리를 설정해주세요');
       $('#tableName').focus();
       return false;
