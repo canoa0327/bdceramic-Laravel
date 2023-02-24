@@ -144,10 +144,7 @@ class ProductController extends Controller
     $cate_no = $request->cate_no;
     $contents = str_replace('upload/', '/assets/data/products/', $request->contents);
 
-    if($request->has('thumbNailImg')) {
-      $request->thumbNailImg->store('images', 'public');
-    }
-
+    /* 제품 정보 DB 입력 */
     DB::table('product' . $group_no)->insert([
       'detail_idx' => $cate_no,
       'data1' => $request->data1,
@@ -158,6 +155,13 @@ class ProductController extends Controller
       'title' => $request->title,
       'contents' => $contents
     ]);
+
+    /* 썸네일 사진 local storage & DB 입력 */
+    if($request->has('thumbNailImg')) {
+      $request->thumbNailImg->store('images', 'public');
+
+      
+    }
 
     return redirect()->route('products.index', ['group_no' => $group_no, 'cate_no' => $cate_no]);
   }
