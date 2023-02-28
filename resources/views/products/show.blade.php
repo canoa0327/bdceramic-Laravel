@@ -16,7 +16,7 @@
     <div class="product-info">
 
         <div class="product-img">
-          {{-- <img class="top-img" src="{{ URL::asset('assets/thumbnail/product'.$group_no.'/'.$productImg[0]->bf_file) }}"> --}}
+          <img class="top-img" src="{{ Storage::url($productImg[0]->bf_file) }}">
         </div>
 
       <div class="product-descript">

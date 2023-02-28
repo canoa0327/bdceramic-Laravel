@@ -51,7 +51,9 @@
         <div class="productView">
           <div class="productImage">
             <a href="/products/show?group_no={{ $group_no }}&cate_no={{ $cate_no }}&product_no={{ $products[$i]->id }}">
-              {{-- <img src="{{ URL::asset('assets/thumbnail/product'.$group_no.'/'.$productImg[$i]->bf_file) }}" class="productImage"> --}}
+              @if (count($productImg) > 0)
+              <img src="{{ Storage::url($productImg[$i]->bf_file) }}" class="productImage">
+              @endif
             </a>
           </div>
           <div class="productInfo">

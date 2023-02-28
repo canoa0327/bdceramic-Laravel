@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Product;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -122,7 +123,7 @@ class ProductController extends Controller
 
     $productImg = DB::table('files')->where([
       ['table_name', 'product' . $group_no . '_' . $cate_no],
-      ['table_id', $product_no]
+      ['detail_idx', $product_no]
     ])->get();
     return view('products.show', compact(['group_no', 'cate_no', 'product_no', 'products', 'productImg', 'productTitle', 'productArr', 'session']));
   }
@@ -145,7 +146,7 @@ class ProductController extends Controller
     $contents = str_replace('upload/', '/assets/data/products/', $request->contents);
 
     /* 제품 정보 DB 입력 */
-    DB::table('product' . $group_no)->insert([
+    $id = DB::table('product' . $group_no)->insertGetId([
       'detail_idx' => $cate_no,
       'data1' => $request->data1,
       'data2' => $request->data2,
@@ -158,9 +159,19 @@ class ProductController extends Controller
 
     /* 썸네일 사진 local storage & DB 입력 */
     if($request->has('thumbNailImg')) {
-      $request->thumbNailImg->store('images', 'public');
+      $path = $request->thumbNailImg->store('images', 'public');
 
-      
+      DB::table('files')->insert([
+        'table_name' => 'product' . $group_no . '_' . $cate_no,
+        'detail_idx' => $id,
+        'bf_no' => '0',
+        'bf_file' => $path
+      ]);
+
+      /** 
+       * update, delete시 용이하게
+       * 파일명 직접 지정하여 files 테이블에도 같이 저장되게끔 구현 예정
+      */
     }
 
     return redirect()->route('products.index', ['group_no' => $group_no, 'cate_no' => $cate_no]);
