@@ -13,12 +13,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    if(session()->has('mgmt-login')) {
-        $value = session()->get('mgmt-login');
-    } else $value = false;
-    return view('layouts.main', ['session' => $value]);
-}); 
+
+
+Route::get('/', 'MainController@index')->name('main.index'); 
 
 Route::get('/products', 'ProductController@index')->name('products.index');
 Route::get('/products/show', 'ProductController@show')->name('products.show');
